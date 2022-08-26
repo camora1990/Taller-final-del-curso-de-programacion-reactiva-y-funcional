@@ -1,7 +1,6 @@
 package com.sofka.agendamiento.dto;
 
 import com.sofka.agendamiento.utilities.type_enum.Appointment_type;
-import com.sofka.agendamiento.utilities.type_enum.State;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -12,7 +11,7 @@ import java.time.LocalDateTime;
 @Data
 @ValidateOnExecution
 @AllArgsConstructor
-public class DateDto {
+public class CreateDateDto {
 
     @NotNull(message = "The date is require")
     private LocalDateTime date;
