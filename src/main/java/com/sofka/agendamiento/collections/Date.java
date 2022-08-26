@@ -2,7 +2,9 @@ package com.sofka.agendamiento.collections;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDateTime;
 
@@ -12,11 +14,13 @@ public class Date {
 
     @Id
     private String id;
+    @Indexed()
     private LocalDateTime date;
     private String address;
     private String agent;
     private String  appointment_type;
     private String document;
+
     private String state;
 
     public Date(LocalDateTime date,
