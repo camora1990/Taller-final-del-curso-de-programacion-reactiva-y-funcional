@@ -1,7 +1,6 @@
 package com.sofka.agendamiento.service;
 
 import com.sofka.agendamiento.collections.Date;
-import com.sofka.agendamiento.dto.UpdateDateDto;
 import com.sofka.agendamiento.repository.DateRespository;
 import com.sofka.agendamiento.service.interfaces.IDateService;
 import com.sofka.agendamiento.utilities.MyResponseUtility;
@@ -30,7 +29,6 @@ public class DateService implements IDateService {
 
     @Override
     public Flux<Date> getAllDate() {
-
         return dateRespository.findAll();
     }
 
